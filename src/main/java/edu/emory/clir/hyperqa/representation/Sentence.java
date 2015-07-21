@@ -15,15 +15,28 @@ import java.util.List;
  * @since 1.0
  */
 public class Sentence {
-    private String text;
+    private String  text;
     private DEPTree depTree;
+    private int     ID = -1;
 
     public Sentence(DEPTree tree)
     {
         depTree = tree;
+        constructText();
+    }
+
+    public Sentence(DEPTree tree, int _ID)
+    {
+        depTree = tree;
+        this.ID = _ID;
+        constructText();
+    }
+
+    private void constructText()
+    {
         StringBuilder builder = new StringBuilder();
 
-        for (DEPNode node: tree)
+        for (DEPNode node: this.depTree)
         {
             builder.append(node.getWordForm() + " ");
         }
@@ -45,5 +58,10 @@ public class Sentence {
 
     public void setDepTree(DEPTree depTree) {
         this.depTree = depTree;
+    }
+
+    public int getID()
+    {
+        return this.ID;
     }
 }

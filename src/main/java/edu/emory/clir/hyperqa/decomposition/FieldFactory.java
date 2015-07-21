@@ -11,6 +11,8 @@ public class FieldFactory {
     {
         switch(type)
         {
+            case ID:
+                return new FieldID();
             case TEXT:
                 return new FieldText();
             case LEMMA_TEXT:

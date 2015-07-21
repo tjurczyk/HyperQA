@@ -1,6 +1,7 @@
-package edu.emory.clir.hyperqa.representation;
+package edu.emory.clir.hyperqa.util;
 
 import edu.emory.clir.hyperqa.decomposition.FieldType;
+import edu.emory.clir.hyperqa.representation.DecomposedSentence;
 
 import java.util.Map;
 

@@ -37,6 +37,12 @@ public class DecomposedSentence {
 
         for (FieldType fieldType: configuration.getFields())
         {
+            // If fieldType is ID, but ID is not valid (<0), skip it
+            if (fieldType.equals(FieldType.ID) && sentence.getID() == -1)
+            {
+                continue;
+            }
+
             try
             {
                 Field field = FieldFactory.createField(fieldType);
@@ -46,8 +52,9 @@ public class DecomposedSentence {
             {
                 BinUtils.LOG.warn("FieldType " + fieldType + " is not supported");
             }
-
         }
+
+        // Add sentence ID if has a proper ID (>-1)
     }
 
     public String toString()
@@ -56,7 +63,7 @@ public class DecomposedSentence {
 
         for(FieldType fieldType: configuration.getFields())
         {
-            builder.append("Field: " + fieldType + ": " + m_fieldRepresentations.get(fieldType));
+            builder.append("Field: " + fieldType + ": " + m_fieldRepresentations.get(fieldType) + "\t");
         }
 
         return builder.toString();

@@ -2,7 +2,7 @@ package edu.emory.clir.hyperqa.index;
 
 import edu.emory.clir.clearnlp.util.BinUtils;
 import edu.emory.clir.hyperqa.representation.DecomposedSentence;
-import edu.emory.clir.hyperqa.representation.JSONBuilder;
+import edu.emory.clir.hyperqa.util.JSONBuilder;
 import org.elasticsearch.action.admin.indices.delete.DeleteIndexRequest;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.client.transport.NoNodeAvailableException;
@@ -45,8 +45,6 @@ public class ElasticSearchIndex implements Index{
 
     private void performClearIndex() throws NoNodeAvailableException
     {
-        client.admin().indices().delete(new DeleteIndexRequest("index")).actionGet();
-
         try
         {
             client.admin().indices().delete(new DeleteIndexRequest("index")).actionGet();
@@ -65,7 +63,7 @@ public class ElasticSearchIndex implements Index{
     {
         String json = JSONBuilder.buildJSONString(representation);
 
-        System.out.println("Json to sent: " + json);
+        //System.out.println("Json to sent: " + json);
         client.prepareIndex("index", "sentence")
                 .setSource(json.toString())
                 .execute()

@@ -5,6 +5,7 @@ package edu.emory.clir.hyperqa.decomposition;
  * @since 1.0
  */
 public enum FieldType {
+    ID         (Group.OTHER),
 
     TEXT       (Group.LEXICAL),
     LEMMA_TEXT (Group.LEXICAL),
@@ -39,6 +40,7 @@ public enum FieldType {
     public enum Group {
         LEXICAL,
         SYNTACTIC,
-        SEMANTIC;
+        SEMANTIC,
+        OTHER;
     }
 }
