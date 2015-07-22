@@ -8,6 +8,7 @@ import edu.emory.clir.clearnlp.tokenization.AbstractTokenizer;
 import edu.emory.clir.clearnlp.util.IOUtils;
 import edu.emory.clir.clearnlp.util.lang.TLanguage;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,30 +16,88 @@ import java.util.List;
  * @since 1.0
  */
 public class Sentence {
-    private String  text;
-    private DEPTree depTree;
-    private int     ID = -1;
+    private String        text;
+    private List<DEPTree> d_trees = new ArrayList();
+    private int           Id;
 
     public Sentence(DEPTree tree)
     {
-        depTree = tree;
-        constructText();
+        addTree(tree);
+        Id = -1;
+        init();
     }
 
-    public Sentence(DEPTree tree, int _ID)
+    public Sentence(DEPTree... trees)
     {
-        depTree = tree;
-        this.ID = _ID;
-        constructText();
+        for (DEPTree t: trees)
+        {
+            addTree(t);
+        }
+        Id = -1;
+
+        init();
     }
 
-    private void constructText()
+    public Sentence(int _Id, DEPTree tree)
+    {
+        addTree(tree);
+        Id = _Id;
+
+        init();
+    }
+
+    public Sentence(int _Id, DEPTree... trees)
+    {
+        for (DEPTree t: trees)
+        {
+            addTree(t);
+        }
+        Id = _Id;
+
+        init();
+    }
+
+    public Sentence(List<DEPTree>... trees)
+    {
+        for (List<DEPTree> ts: trees)
+        {
+            addTrees(ts);
+        }
+
+        init();
+    }
+
+    public Sentence(int _Id, List<DEPTree>... trees)
+    {
+        for (List<DEPTree> ts: trees)
+        {
+            addTrees(ts);
+        }
+        Id = _Id;
+
+        init();
+    }
+
+    private void addTree(DEPTree t)
+    {
+        d_trees.add(t);
+    }
+
+    private void addTrees(List<DEPTree> ts)
+    {
+        d_trees.addAll(ts);
+    }
+
+    private void init()
     {
         StringBuilder builder = new StringBuilder();
 
-        for (DEPNode node: this.depTree)
+        for (DEPTree tree: d_trees)
         {
-            builder.append(node.getWordForm() + " ");
+            for (DEPNode node: tree)
+            {
+                builder.append(node.getWordForm() + " ");
+            }
         }
 
         text = builder.toString();
@@ -48,20 +107,17 @@ public class Sentence {
         return text;
     }
 
-    public void setText(String text) {
-        this.text = text;
-    }
-
-    public DEPTree getDepTree() {
-        return depTree;
-    }
-
-    public void setDepTree(DEPTree depTree) {
-        this.depTree = depTree;
+    public List<DEPTree> getDepTrees() {
+        return d_trees;
     }
 
     public int getID()
     {
-        return this.ID;
+        return this.Id;
+    }
+
+    public Sentence concatenate(Sentence s)
+    {
+        return new Sentence(-1, this.getDepTrees(), s.getDepTrees());
     }
 }
