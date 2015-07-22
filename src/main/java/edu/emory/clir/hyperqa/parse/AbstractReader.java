@@ -1,25 +1,33 @@
 package edu.emory.clir.hyperqa.parse;
 
+import edu.emory.clir.clearnlp.util.IOUtils;
 import edu.emory.clir.hyperqa.representation.Document;
+import edu.emory.clir.hyperqa.representation.MicrosoftDocument;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
+import java.util.Iterator;
 import java.util.List;
 
 /**
  * @author Tomasz Jurczyk ({@code tomasz.jurczyk@emory.edu})
  * @since 1.0
  */
-public abstract class AbstractReader {
-    protected String filename;
+abstract public class AbstractReader<T>{
+    protected InputStream    f_in;
 
-    public AbstractReader(String _filename)
-            throws IOException
+    public AbstractReader(InputStream in)
     {
-        filename = _filename;
+        open(in);
     }
 
-    public abstract List<Document> readFile() throws IOException;
+    public AbstractReader()
+    {
+    }
+
+    abstract public T next();
+
+    public void open(InputStream in)
+    {
+        f_in = in;
+    }
 }
