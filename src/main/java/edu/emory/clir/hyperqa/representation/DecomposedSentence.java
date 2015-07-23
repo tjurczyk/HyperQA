@@ -44,7 +44,7 @@ public class DecomposedSentence {
 
             try
             {
-                Field field = FieldFactory.createField(fieldType);
+                Field field = FieldFactory.createField(fieldType, configuration);
                 m_fieldRepresentations.put(fieldType, field.decomposeSentence(sentence));
             }
             catch (UnsupportedOperationException e)
