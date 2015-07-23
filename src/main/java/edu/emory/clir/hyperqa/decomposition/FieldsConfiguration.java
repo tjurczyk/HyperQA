@@ -12,6 +12,15 @@ import java.util.Set;
  */
 public class FieldsConfiguration {
     private Set<FieldType> fields;
+    private boolean skipPunctuationMarks = true;
+
+    public boolean isSkipPunctuationMarks() {
+        return skipPunctuationMarks;
+    }
+
+    public void setSkipPunctuationMarks(boolean skipPunctuationMarks) {
+        this.skipPunctuationMarks = skipPunctuationMarks;
+    }
 
     public FieldsConfiguration(List<FieldType> fieldTypes)
     {

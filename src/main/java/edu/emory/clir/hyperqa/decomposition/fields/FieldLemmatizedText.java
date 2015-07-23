@@ -2,7 +2,9 @@ package edu.emory.clir.hyperqa.decomposition.fields;
 
 import edu.emory.clir.clearnlp.dependency.DEPNode;
 import edu.emory.clir.clearnlp.dependency.DEPTree;
+import edu.emory.clir.clearnlp.pos.POSLibEn;
 import edu.emory.clir.hyperqa.decomposition.FieldType;
+import edu.emory.clir.hyperqa.decomposition.FieldsConfiguration;
 import edu.emory.clir.hyperqa.representation.Sentence;
 
 /**
@@ -10,8 +12,9 @@ import edu.emory.clir.hyperqa.representation.Sentence;
  * @since 1.0
  */
 public class FieldLemmatizedText extends Field {
-    public FieldLemmatizedText()
+    public FieldLemmatizedText(FieldsConfiguration conf)
     {
+        super(conf);
         type = FieldType.LEMMA_TEXT;
     }
 
@@ -23,6 +26,7 @@ public class FieldLemmatizedText extends Field {
         {
             for (DEPNode node: tree)
             {
+                if (POSLibEn.isPunctuation(node.getPOSTag()) && conf.isSkipPunctuationMarks()) continue;
                 builder.append(node.getLemma() + " ");
             }
         }

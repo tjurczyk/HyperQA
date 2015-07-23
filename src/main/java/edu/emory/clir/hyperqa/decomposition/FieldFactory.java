@@ -10,16 +10,16 @@ import edu.emory.clir.hyperqa.decomposition.fields.FieldText;
  * @since 1.0
  */
 public class FieldFactory {
-    public static Field createField(FieldType type)
+    public static Field createField(FieldType type, FieldsConfiguration conf)
     {
         switch(type)
         {
             case ID:
-                return new FieldID();
+                return new FieldID(conf);
             case TEXT:
-                return new FieldText();
+                return new FieldText(conf);
             case LEMMA_TEXT:
-                return new FieldLemmatizedText();
+                return new FieldLemmatizedText(conf);
             default:
                 throw new UnsupportedOperationException();
         }

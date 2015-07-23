@@ -1,6 +1,7 @@
 package edu.emory.clir.hyperqa.decomposition.fields;
 
 import edu.emory.clir.hyperqa.decomposition.FieldType;
+import edu.emory.clir.hyperqa.decomposition.FieldsConfiguration;
 import edu.emory.clir.hyperqa.representation.Sentence;
 
 /**
@@ -8,8 +9,9 @@ import edu.emory.clir.hyperqa.representation.Sentence;
  * @since 1.0
  */
 public class FieldID extends Field {
-    public FieldID()
+    public FieldID(FieldsConfiguration conf)
     {
+        super(conf);
         type = FieldType.ID;
     }
 
