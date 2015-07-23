@@ -1,7 +1,5 @@
 package edu.emory.clir.hyperqa.representation;
 
-import edu.emory.clir.clearnlp.dependency.DEPNode;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;

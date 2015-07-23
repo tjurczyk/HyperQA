@@ -1,6 +1,7 @@
 package edu.emory.clir.hyperqa.decomposition.fields;
 
 import edu.emory.clir.clearnlp.dependency.DEPNode;
+import edu.emory.clir.clearnlp.dependency.DEPTree;
 import edu.emory.clir.hyperqa.decomposition.FieldType;
 import edu.emory.clir.hyperqa.representation.Sentence;
 
@@ -18,9 +19,12 @@ public class FieldLemmatizedText extends Field {
     {
         StringBuilder builder = new StringBuilder();
 
-        for (DEPNode node: sentence.getDepTree())
+        for (DEPTree tree: sentence.getDepTrees())
         {
-            builder.append(node.getLemma() + " ");
+            for (DEPNode node: tree)
+            {
+                builder.append(node.getLemma() + " ");
+            }
         }
 
         return builder.toString();

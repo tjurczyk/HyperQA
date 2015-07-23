@@ -1,6 +1,5 @@
 package edu.emory.clir.hyperqa.decomposition.fields;
 
-import edu.emory.clir.clearnlp.dependency.DEPNode;
 import edu.emory.clir.hyperqa.decomposition.FieldType;
 import edu.emory.clir.hyperqa.representation.Sentence;
 

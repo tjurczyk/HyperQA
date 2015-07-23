@@ -2,7 +2,6 @@ package edu.emory.clir.hyperqa.util;
 
 import edu.emory.clir.clearnlp.dependency.DEPNode;
 import edu.emory.clir.clearnlp.dependency.DEPTree;
-import edu.emory.clir.clearnlp.util.StringUtils;
 
 /**
  * @author Tomasz Jurczyk ({@code tomasz.jurczyk@emory.edu})

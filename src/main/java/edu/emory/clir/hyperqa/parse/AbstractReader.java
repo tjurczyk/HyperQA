@@ -1,12 +1,6 @@
 package edu.emory.clir.hyperqa.parse;
 
-import edu.emory.clir.clearnlp.util.IOUtils;
-import edu.emory.clir.hyperqa.representation.Document;
-import edu.emory.clir.hyperqa.representation.MicrosoftDocument;
-
-import java.io.*;
-import java.util.Iterator;
-import java.util.List;
+import java.io.InputStream;
 
 /**
  * @author Tomasz Jurczyk ({@code tomasz.jurczyk@emory.edu})

@@ -2,16 +2,12 @@ package edu.emory.clir.hyperqa.parse;
 
 import edu.emory.clir.clearnlp.dependency.DEPTree;
 import edu.emory.clir.clearnlp.reader.TSVReader;
-import edu.emory.clir.hyperqa.MicrosoftExperiment;
-import edu.emory.clir.hyperqa.representation.Document;
 import edu.emory.clir.hyperqa.representation.MicrosoftDocument;
 import edu.emory.clir.hyperqa.representation.Sentence;
 import edu.emory.clir.hyperqa.util.SentenceUtils;
-import jdk.nashorn.internal.runtime.arrays.ArrayIndex;
 
-import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 
 /**
  * @author Tomasz Jurczyk ({@code tomasz.jurczyk@emory.edu})
@@ -61,7 +57,7 @@ public class MicrosoftReader extends AbstractReader<MicrosoftDocument>{
             }
             else
             {
-                sentence = new Sentence(tree, sentenceId++);
+                sentence = new Sentence(sentenceId++, tree);
                 d.add_sentence(sentence);
             }
         }

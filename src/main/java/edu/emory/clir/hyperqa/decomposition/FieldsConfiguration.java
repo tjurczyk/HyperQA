@@ -1,7 +1,6 @@
 package edu.emory.clir.hyperqa.decomposition;
 
 import com.google.common.collect.Sets;
-import edu.emory.clir.hyperqa.decomposition.fields.Field;
 
 import java.util.ArrayList;
 import java.util.List;

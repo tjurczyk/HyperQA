@@ -1,12 +1,7 @@
 package edu.emory.clir.hyperqa.representation;
 
-import edu.emory.clir.clearnlp.component.utils.NLPUtils;
 import edu.emory.clir.clearnlp.dependency.DEPNode;
 import edu.emory.clir.clearnlp.dependency.DEPTree;
-import edu.emory.clir.clearnlp.reader.TSVReader;
-import edu.emory.clir.clearnlp.tokenization.AbstractTokenizer;
-import edu.emory.clir.clearnlp.util.IOUtils;
-import edu.emory.clir.clearnlp.util.lang.TLanguage;
 
 import java.util.ArrayList;
 import java.util.List;

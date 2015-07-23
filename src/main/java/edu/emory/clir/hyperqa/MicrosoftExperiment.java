@@ -1,12 +1,11 @@
 package edu.emory.clir.hyperqa;
 
-import edu.emory.clir.hyperqa.representation.Document;
-import edu.emory.clir.hyperqa.representation.DecomposedSentence;
 import edu.emory.clir.hyperqa.decomposition.FieldType;
 import edu.emory.clir.hyperqa.decomposition.FieldsConfiguration;
 import edu.emory.clir.hyperqa.index.ElasticSearchIndex;
 import edu.emory.clir.hyperqa.index.Index;
 import edu.emory.clir.hyperqa.parse.MicrosoftReader;
+import edu.emory.clir.hyperqa.representation.DecomposedSentence;
 import edu.emory.clir.hyperqa.representation.MicrosoftDocument;
 import edu.emory.clir.hyperqa.representation.Sentence;
 
@@ -54,43 +53,46 @@ public class MicrosoftExperiment {
 
     public void experiment()
     {
-        if (mode == 2)
+        if (mode == 0)
         {
-            for (int i = 0; i < N; i++)
-            {
-                for (MicrosoftDocument document: l_documents)
-                {
-                    processDocument(document);
-                    trainModel(document);
-                }
 
-                for (MicrosoftDocument document: l_documents)
-                {
-                    processDocument(document);
-                    validateModel(document);
-                }
-
-                for (MicrosoftDocument document: l_documents)
-                {
-                    processDocument(document);
-                    testModel(document);
-                }
-            }
         }
-        else
+        else if (mode == 1)
         {
             for (MicrosoftDocument document: l_documents)
             {
-                System.out.println("New document: ");
-                processDocument(document);
+                indexDocument(document);
+                MicrosoftAnswerer answerer = new MicrosoftAnswerer(document, fieldsConfiguration, index);
+                System.out.println(answerer.test());
             }
         }
-
+        else if (mode == 2)
+        {
+            for (int i = 0; i < N; i++)
+            {
+//                for (MicrosoftDocument document: l_documents)
+//                {
+//                    processDocument(document);
+//                    trainModel(document);
+//                }
+//
+//                for (MicrosoftDocument document: l_documents)
+//                {
+//                    processDocument(document);
+//                    validateModel(document);
+//                }
+//
+//                for (MicrosoftDocument document: l_documents)
+//                {
+//                    processDocument(document);
+//                    testModel(document);
+//                }
+            }
+        }
     }
 
-    private void processDocument(MicrosoftDocument document)
+    private void indexDocument(MicrosoftDocument document)
     {
-        // Index all sentences
         List<Sentence> sentences = document.get_sentences();
 
         for (int i = 0; i < sentences.size(); i++)
@@ -100,18 +102,8 @@ public class MicrosoftExperiment {
             System.out.println(decomposedSentence);
             index.index(decomposedSentence);
         }
-
-        // Questions time
-        if (mode == 0)
-        {
-            trainModel(document);
-        }
-        else if (mode == 1)
-        {
-            testModel(document);
-        }
-
     }
+
 
     private void trainModel(MicrosoftDocument document)
     {
@@ -125,12 +117,6 @@ public class MicrosoftExperiment {
 
     private void testModel(MicrosoftDocument document)
     {
-
-        // For each question
-        for (Sentence question: document.get_questions())
-        {
-
-        }
 
     }
 

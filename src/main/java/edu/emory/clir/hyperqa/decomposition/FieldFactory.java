@@ -1,6 +1,9 @@
 package edu.emory.clir.hyperqa.decomposition;
 
-import edu.emory.clir.hyperqa.decomposition.fields.*;
+import edu.emory.clir.hyperqa.decomposition.fields.Field;
+import edu.emory.clir.hyperqa.decomposition.fields.FieldID;
+import edu.emory.clir.hyperqa.decomposition.fields.FieldLemmatizedText;
+import edu.emory.clir.hyperqa.decomposition.fields.FieldText;
 
 /**
  * @author Tomasz Jurczyk ({@code tomasz.jurczyk@emory.edu})

@@ -6,7 +6,6 @@ import edu.emory.clir.hyperqa.decomposition.FieldType;
 import edu.emory.clir.hyperqa.decomposition.FieldsConfiguration;
 import edu.emory.clir.hyperqa.decomposition.fields.Field;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
