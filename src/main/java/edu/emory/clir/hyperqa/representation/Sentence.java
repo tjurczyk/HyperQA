@@ -115,4 +115,19 @@ public class Sentence {
     {
         return new Sentence(-1, this.getDepTrees(), s.getDepTrees());
     }
+
+    public String toString()
+    {
+        StringBuilder builder = new StringBuilder();
+
+        for (DEPTree tree: d_trees)
+        {
+            for (DEPNode node: tree)
+            {
+                builder.append(node.getWordForm() + " ");
+            }
+        }
+
+        return builder.toString();
+    }
 }
