@@ -56,6 +56,10 @@ public class MicrosoftAnswerer {
             Map<Integer,Map<Integer,Double>> m_answer    = new HashMap();
             Map<Integer,Map<Integer,Double>> m_topanswer = new HashMap();
 
+            // Maps for the question-answer results
+            Map<Integer,Map<Integer,Double>> m_questionanswer    = new HashMap<>();
+            Map<Integer,Map<Integer,Double>> m_topquestionanswer = new HashMap<>();
+
             //Map<FieldType,Map<Integer,Double>> m = index.query(ds);
             //System.out.println("Question: " + m);
 
@@ -78,6 +82,16 @@ public class MicrosoftAnswerer {
                 System.out.println("Answer id: " + i + ", results: " + m_answer.get(i));
             }
 
+            // Collect and merge results for question-answers
+            for (int i = 0; i < NUMBER_OF_ANSWERS; i++)
+            {
+                Sentence joint = q.concatenate(document.getAnswers(q_index, i));
+                DecomposedSentence d_joint = new DecomposedSentence(joint, configuration);
+
+                m_questionanswer.put(i, mergeResults(index.query(d_joint)));
+                System.out.println("Answer id: " + i + ", question-answer results: " + m_questionanswer.get(i));
+            }
+
             // Select top answer hits
             for (int i = 0; i < NUMBER_OF_ANSWERS; i++)
             {
@@ -98,7 +112,7 @@ public class MicrosoftAnswerer {
                 for (int j = 0; j < 4; j++)
                 {
                     double likelihood = calculateHighestLikelihood
-                            (entry.getKey(), entry.getValue(), m_topanswer.get(j));
+                            (entry.getKey(), entry.getValue(), m_topanswer.get(j), m_questionanswer.get(j));
                     questionResultsMap.put(j, likelihood);
                     System.out.println("For key = " + entry.getKey() + " max likelihood = " + likelihood);
                 }
@@ -173,12 +187,13 @@ public class MicrosoftAnswerer {
     /**
      * Calculate highest likelihood between a specific question-seed sentence and each answer.
      *
-     * @param sentenceSeedId an id of the question-seed sentence
-     * @param score          a score of the question-seed sentence
-     * @param answerMap      map of answers scores
+     * @param sentence_seed_id an id of the question-seed sentence
+     * @param question_score   a score of the question-seed sentence
+     * @param answerMap        map of answers scores
      * @return a max likelihood between question-seed sentence and answer sentence
      */
-    private double calculateHighestLikelihood(int sentenceSeedId, double score, Map<Integer,Double> answerMap)
+    private double calculateHighestLikelihood(int sentence_seed_id, double question_score, Map<Integer,Double> answerMap,
+                                              Map<Integer,Double> questionAnswerMap)
     {
         double likelihood = -1;
 
@@ -193,17 +208,24 @@ public class MicrosoftAnswerer {
              *           distance = question_seed_id/answer_id
              */
 
-            double distanceFactor = entry.getKey() < sentenceSeedId ?
-                    (double)sentenceSeedId/((double)sentenceSeedId*2-entry.getKey()) :
-                    (double)sentenceSeedId/((double)entry.getKey());
+            double distanceFactor = entry.getKey() < sentence_seed_id ?
+                    (double)sentence_seed_id/((double)sentence_seed_id*2-entry.getKey()) :
+                    (double)sentence_seed_id/((double)entry.getKey());
 
             /**
              * Likelihood is the accumulated score of:
              * - score (relevance) of question
              * - score (relevance) of answer
+             * - score (relevance) of question-answer (joint)
              * - distance factor (distance between question and answer sentence)
              */
-            double calculated_likelihood = score + entry.getValue() + distanceFactor;
+
+            double answer_score = entry.getValue();
+
+            double question_answer_score = questionAnswerMap.containsKey(entry.getKey()) ?
+                    questionAnswerMap.get(entry.getKey()) : 0;
+
+            double calculated_likelihood = question_score + answer_score + question_answer_score + distanceFactor;
 
             if (likelihood == -1 || calculated_likelihood > likelihood)
             {
