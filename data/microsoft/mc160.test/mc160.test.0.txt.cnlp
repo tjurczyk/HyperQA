@@ -1,0 +1,606 @@
+1	Todd	todd	NNP	_	2	nsubj	2:A1
+2	is	be	VBZ	pb=be	0	root	_
+3	a	a	DT	_	5	det	_
+4	small	small	JJ	_	5	amod	_
+5	boy	boy	NN	_	2	attr	2:PRD
+6	in	in	IN	_	5	prep	_
+7	the	the	DT	_	8	det	_
+8	town	town	NN	_	6	pobj	_
+9	of	of	IN	_	8	prep	_
+10	Rocksville	rocksville	NNP	_	9	pobj	_
+11	.	.	.	_	2	punct	_
+
+1	Todd	todd	NNP	_	2	nsubj	2:A0
+2	thinks	think	VBZ	pb=think	0	root	_
+3	his	his	PRP$	_	4	poss	_
+4	town	town	NN	_	5	nsubj	5:A1
+5	is	be	VBZ	pb=be	2	ccomp	2:A1
+6	the	the	DT	_	8	det	_
+7	best	good	JJS	_	8	amod	_
+8	place	place	NN	_	5	attr	5:PRD
+9	in	in	IN	_	8	prep	_
+10	the	the	DT	_	11	det	_
+11	world	world	NN	_	9	pobj	_
+12	,	,	,	_	5	punct	_
+13	and	and	CC	_	5	cc	_
+14	out	out	IN	p2=RB	23	prep	_
+15	of	of	IN	_	14	prep	_
+16	all	all	PDT	_	18	predet	_
+17	the	the	DT	_	18	det	_
+18	places	place	NNS	_	15	pobj	_
+19	in	in	IN	_	18	prep	_
+20	Rocksville	rocksville	NNP	_	19	pobj	_
+21	,	,	,	_	20	punct	_
+22	Todd	todd	NNP	_	23	nsubj	23:A0;25:A0
+23	loves	love	VBZ	pb=love	5	conj	_
+24	to	to	TO	_	25	aux	_
+25	play	play	VB	pb=play	23	xcomp	23:A1
+26	in	in	IN	_	25	prep	25:LOC
+27	Lake	lake	NNP	_	28	compound	_
+28	Keet	keet	NNP	_	26	pobj	_
+29	the	the	DT	_	30	det	_
+30	most	most	RBS	p2=JJS	25	advmod	25:EXT
+31	.	.	.	_	2	punct	_
+
+1	Lake	lake	NNP	_	2	compound	_
+2	Keet	keet	NNP	_	3	nsubj	3:A1
+3	is	be	VBZ	pb=be	0	root	_
+4	a	a	DT	_	6	det	_
+5	small	small	JJ	_	6	amod	_
+6	lake	lake	NN	_	3	attr	3:PRD
+7	with	with	IN	_	6	prep	_
+8	fish	fish	NN	p2=NNS	7	pobj	_
+9	,	,	,	_	8	punct	_
+10	plants	plant	NNS	_	8	conj	_
+11	,	,	,	_	10	punct	_
+12	and	and	CC	_	10	cc	_
+13	even	even	RB	_	15	advmod	_
+14	little	little	JJ	_	15	amod	_
+15	shells	shell	NNS	_	10	conj	_
+16	.	.	.	_	3	punct	_
+
+1	Todd	todd	NNP	_	5	poss	_
+2	'	'	POS	p2=''	1	case	_
+3	s	s	POS	p2=JJ	1	case	_
+4	favorite	favorite	JJ	_	5	amod	_
+5	part	part	NN	_	6	nsubj	6:A1
+6	was	be	VBD	pb=be	0	root	_
+7	the	the	DT	_	9	det	_
+8	big	big	JJ	_	9	amod	_
+9	rock	rock	NN	_	6	attr	6:PRD
+10	in	in	IN	_	9	prep	_
+11	the	the	DT	_	12	det	_
+12	middle	middle	NN	_	10	pobj	_
+13	of	of	IN	_	12	prep	_
+14	the	the	DT	_	15	det	_
+15	lake	lake	NN	_	13	pobj	_
+16	.	.	.	_	6	punct	_
+
+1	Todd	todd	NNP	p2=NN	2	nsubj	2:A0
+2	lives	live	VBZ	p2=NNS|pb=live	0	root	_
+3	pretty	pretty	RB	_	4	advmod	_
+4	close	close	JJ	p2=RB	2	advmod	2:LOC
+5	to	to	IN	_	4	prep	_
+6	the	the	DT	_	7	det	_
+7	lake	lake	NN	_	5	pobj	_
+8	,	,	,	_	2	punct	_
+9	so	so	RB	p2=CC	11	advmod	11:ADV
+10	he	he	PRP	_	11	nsubj	11:A0
+11	gets	get	VBZ	pb=get	2	conj	_
+12	to	to	TO	_	13	aux	_
+13	go	go	VB	pb=go	11	xcomp	11:A1
+14	there	there	RB	_	13	advmod	13:GOL
+15	a	a	DT	_	16	det	_
+16	lot	lot	NN	_	13	npadvmod	13:EXT
+17	,	,	,	_	11	punct	_
+18	but	but	CC	_	11	cc	_
+19	could	could	MD	_	22	aux	22:MOD
+20	never	never	RB	_	22	neg	22:NEG
+21	to	to	TO	_	22	aux	_
+22	get	get	VB	pb=get	11	conj	_
+23	to	to	IN	_	22	prep	22:GOL
+24	the	the	DT	_	25	det	_
+25	rock	rock	NN	_	23	pobj	_
+26	in	in	IN	_	22	prep	22:TMP
+27	the	the	DT	_	28	det	_
+28	middle	middle	NN	_	26	pobj	_
+29	.	.	.	_	2	punct	_
+
+1	Todd	todd	NNP	_	4	poss	_
+2	'	'	POS	p2=``	1	case	_
+3	s	s	POS	p2=AFX	4	poss	_
+4	dad	dad	NN	_	6	nsubj	6:A0
+5	never	never	RB	_	6	neg	6:NEG
+6	let	let	VB	p2=VBP|pb=let	0	root	_
+7	s	s	PRP	p2=IN	9	nsubj	_
+8	him	him	PRP	_	9	nsubj	9:A0
+9	swim	swim	VB	p2=VBP|pb=swim	6	ccomp	6:A1
+10	too	too	RB	_	11	advmod	_
+11	far	far	RB	_	9	advmod	9:EXT
+12	because	because	IN	_	16	mark	_
+13	Todd	todd	NNP	_	16	nsubj	16:A0
+14	ca	can	MD	_	16	aux	16:MOD
+15	n't	not	RB	_	16	neg	16:NEG
+16	swim	swim	VB	pb=swim	6	advcl	6:CAU
+17	very	very	RB	_	18	advmod	_
+18	well	well	RB	_	16	advmod	16:MNR
+19	.	.	.	_	6	punct	_
+
+1	During	during	IN	_	5	prep	5:TMP
+2	summer	summer	NN	_	1	pobj	_
+3	,	,	,	_	5	punct	_
+4	Todd	todd	NNP	_	5	nsubj	5:A0
+5	told	tell	VBD	pb=tell	0	root	_
+6	his	his	PRP$	_	7	poss	_
+7	dad	dad	NN	_	5	dobj	5:GOL
+8	that	that	IN	_	10	mark	_
+9	he	he	PRP	_	10	nsubj	10:A0;12:A0
+10	wanted	want	VBD	pb=want	5	ccomp	5:A1
+11	to	to	TO	_	12	aux	_
+12	get	get	VB	pb=get	10	xcomp	10:A1
+13	to	to	IN	_	12	prep	12:GOL
+14	the	the	DT	_	15	det	_
+15	rock	rock	NN	_	13	pobj	_
+16	before	before	IN	p2=RB	18	mark	_
+17	break	break	NN	_	18	nsubj	18:A1
+18	ended	ended	VBD	p2=VBN|pb=ended	12	advcl	12:TMP
+19	.	.	.	_	5	punct	_
+
+1	Todd	todd	NNP	_	4	poss	_
+2	'	'	POS	p2=''	1	case	_
+3	s	s	POS	p2=AFX	4	poss	_
+4	dad	dad	NN	_	5	nsubj	5:A0
+5	told	tell	VBD	pb=tell	0	root	_
+6	him	him	PRP	_	5	dobj	5:GOL
+7	he	he	PRP	_	8	nsubj	10:A0
+8	had	have	VBD	_	5	ccomp	5:A1
+9	to	to	TO	_	10	aux	_
+10	try	try	VB	pb=try	8	xcomp	_
+11	his	his	PRP$	_	12	poss	_
+12	hardest	hard	JJS	p2=RBS	10	dobj	10:A1
+13	.	.	.	_	5	punct	_
+
+1	If	if	IN	_	3	mark	_
+2	he	he	PRP	_	3	nsubj	3:A0
+3	did	do	VBD	pb=do	11	advcl	11:ADV
+4	,	,	,	_	11	punct	_
+5	then	then	RB	_	11	advmod	11:TMP
+6	Todd	todd	NNP	_	9	poss	_
+7	'	'	POS	p2=``	6	case	_
+8	s	s	POS	p2=IN	9	poss	_
+9	dad	dad	NN	_	11	nsubj	11:A0
+10	would	would	MD	_	11	aux	11:MOD
+11	watch	watch	VB	pb=watch	0	root	_
+12	him	him	PRP	_	13	nsubj	13:A0
+13	swim	swim	VB	pb=swim	11	ccomp	11:A1
+14	every	every	DT	_	15	det	_
+15	day	day	NN	_	13	npadvmod	13:TMP
+16	.	.	.	_	11	punct	_
+
+1	If	if	IN	_	3	mark	_
+2	Todd	todd	NNP	_	3	nsubj	3:A0;5:A0;7:A1
+3	wanted	want	VBD	pb=want	15	advcl	15:ADV
+4	to	to	TO	_	5	aux	_
+5	try	try	VB	pb=try	3	xcomp	3:A1
+6	and	and	CC	_	5	cc	_
+7	get	get	VB	pb=get	5	conj	_
+8	to	to	IN	_	7	prep	7:GOL
+9	the	the	DT	_	10	det	_
+10	rock	rock	NN	_	8	pobj	_
+11	,	,	,	_	15	punct	_
+12	his	his	PRP$	_	13	poss	_
+13	dad	dad	NN	_	15	nsubj	15:A0;19:A0
+14	would	would	MD	_	15	aux	15:MOD
+15	follow	follow	VB	pb=follow	0	root	_
+16	him	him	PRP	_	15	dobj	15:A1
+17	there	there	RB	_	15	advmod	15:LOC
+18	to	to	TO	_	19	aux	_
+19	make	make	VB	pb=make	15	advcl	15:PRP
+20	sure	sure	JJ	_	19	ccomp	19:A1
+21	he	he	PRP	_	22	nsubj	22:A1
+22	was	be	VBD	pb=be	20	csubj	_
+23	safe	safe	JJ	_	22	acomp	22:PRD
+24	.	.	.	_	15	punct	_
+
+1	Todd	todd	NNP	_	4	poss	_
+2	'	'	POS	p2=''	1	case	_
+3	s	s	POS	p2=AFX	4	poss	_
+4	dad	dad	NN	_	5	nsubj	5:A0
+5	wrote	write	VBD	pb=write	0	root	_
+6	this	this	DT	_	5	dobj	5:A1
+7	down	down	RP	p2=IN	5	prt	5:C-V
+8	in	in	IN	_	5	prep	5:LOC
+9	his	his	PRP$	_	10	poss	_
+10	notebook	notebook	NN	_	8	pobj	_
+11	so	so	IN	p2=RB	15	mark	_
+12	he	he	PRP	_	15	nsubj	15:A0
+13	would	would	MD	_	15	aux	15:MOD
+14	n't	not	RB	_	15	neg	15:NEG
+15	forget	forget	VB	pb=forget	5	advcl	5:PRP
+16	.	.	.	_	5	punct	_
+
+1	After	after	IN	p2=RB	6	prep	6:TMP;9:TMP
+2	a	a	DT	_	3	det	_
+3	week	week	NN	_	1	pobj	_
+4	,	,	,	_	6	punct	_
+5	Todd	todd	NNP	_	6	nsubj	6:A0
+6	made	make	VBD	pb=make	0	root	_
+7	his	his	PRP$	_	9	poss	_
+8	first	#ord#	JJ	_	9	amod	_
+9	try	try	NN	p2=VB|pb=try	6	dobj	6:PRR
+10	to	to	TO	_	11	aux	_
+11	get	get	VB	pb=get	6	advcl	6:PRP
+12	to	to	IN	_	11	prep	11:GOL
+13	the	the	DT	_	14	det	_
+14	rock	rock	NN	_	12	pobj	_
+15	,	,	,	_	6	punct	_
+16	and	and	CC	_	6	cc	_
+17	his	his	PRP$	_	18	poss	_
+18	dad	dad	NN	_	19	nsubj	19:A1
+19	followed	followed	VBD	pb=followed	6	conj	_
+20	him	him	PRP	_	19	dobj	19:A2
+21	like	like	IN	p2=UH	23	mark	_
+22	he	he	PRP	_	23	nsubj	23:A0
+23	said	say	VBD	pb=say	19	advcl	_
+24	he	he	PRP	_	25	nsubj	_
+25	would	would	MD	_	23	ccomp	23:A1
+26	.	.	.	_	19	punct	_
+
+1	Todd	todd	NNP	_	4	nsubj	4:A0
+2	did	do	VBD	_	4	aux	_
+3	n't	not	RB	_	4	neg	4:NEG
+4	make	make	VB	pb=make	0	root	_
+5	it	it	PRP	_	4	dobj	4:C-V
+6	to	to	IN	_	4	prep	4:A2
+7	the	the	DT	_	8	det	_
+8	rock	rock	NN	_	6	pobj	_
+9	before	before	IN	_	11	mark	_
+10	he	he	PRP	_	11	nsubj	11:A1
+11	got	get	VBD	pb=get	4	advcl	4:TMP
+12	tired	tired	JJ	_	11	acomp	11:GOL
+13	and	and	CC	_	11	cc	_
+14	had	have	VBD	_	11	conj	_
+15	to	to	TO	_	16	aux	_
+16	turn	turn	VB	pb=turn	14	xcomp	_
+17	around	around	RB	p2=RP	16	advmod	16:DIR
+18	.	.	.	_	4	punct	_
+
+1	He	he	PRP	_	2	nsubj	2:A0;11:A0;13:A0
+2	practiced	practice	VBD	pb=practice	0	root	_
+3	even	even	RB	_	4	advmod	_
+4	harder	hard	RBR	p2=JJR	2	advmod	2:MNR
+5	for	for	IN	_	2	prep	2:TMP
+6	the	the	DT	_	9	det	_
+7	next	next	JJ	_	9	amod	_
+8	two	#crd#	CD	_	9	nummod	_
+9	weeks	week	NNS	_	5	pobj	_
+10	and	and	CC	_	2	cc	_
+11	wanted	want	VBD	pb=want	2	conj	_
+12	to	to	TO	_	13	aux	_
+13	try	try	VB	pb=try	11	xcomp	11:A1
+14	again	again	RB	_	13	advmod	13:TMP
+15	.	.	.	_	2	punct	_
+
+1	So	so	RB	p2=CC	10	advmod	10:DIS
+2	,	,	,	_	10	punct	_
+3	a	a	DT	_	4	det	_
+4	month	month	NN	_	7	npadvmod	_
+5	after	after	IN	_	7	mark	_
+6	summer	summer	NN	_	7	nsubj	7:A1
+7	started	start	VBD	pb=start	10	advcl	10:TMP
+8	,	,	,	_	10	punct	_
+9	Todd	todd	NNP	_	10	nsubj	10:A0;12:A0
+10	tried	try	VBD	pb=try	0	root	_
+11	to	to	TO	_	12	aux	_
+12	reach	reach	VB	pb=reach	10	xcomp	10:A1
+13	the	the	DT	_	14	det	_
+14	rock	rock	NN	_	12	dobj	12:A1
+15	again	again	RB	_	12	advmod	12:TMP
+16	.	.	.	_	10	punct	_
+
+1	This	this	DT	_	2	det	_
+2	time	time	NN	_	5	npadvmod	5:TMP;10:TMP
+3	,	,	,	_	5	punct	_
+4	Todd	todd	NNP	_	5	nsubj	5:A0
+5	gave	give	VBD	pb=give	0	root	_
+6	it	it	PRP	_	5	dative	5:GOL
+7	his	his	PRP$	p2=RB	8	poss	_
+8	all	all	DT	p2=NN	1	appos	10:A1
+9	and	and	CC	_	8	cc	_
+10	got	get	VBD	pb=get	8	conj	_
+11	all	all	PDT	_	13	predet	_
+12	the	the	DT	_	13	det	_
+13	way	way	NN	_	14	npadvmod	_
+14	to	to	IN	_	10	prep	10:GOL
+15	the	the	DT	_	16	det	_
+16	rock	rock	NN	_	14	pobj	_
+17	.	.	.	_	5	punct	_
+
+1	He	he	PRP	_	2	nsubj	2:A1
+2	was	be	VBD	pb=be	0	root	_
+3	very	very	RB	_	4	advmod	_
+4	happy	happy	JJ	_	2	acomp	2:PRD
+5	,	,	,	_	2	punct	_
+6	and	and	CC	_	2	cc	_
+7	his	his	PRP$	_	8	poss	_
+8	dad	dad	NN	_	9	nsubj	9:A1
+9	was	be	VBD	pb=be	2	conj	_
+10	very	very	RB	_	11	advmod	_
+11	proud	proud	JJ	_	9	acomp	9:PRD
+12	of	of	IN	_	11	prep	_
+13	his	his	PRP$	_	14	poss	_
+14	son	son	NN	_	18	poss	_
+15	'	'	POS	p2=''	14	case	_
+16	s	s	POS	p2=AFX	14	case	_
+17	hard	hard	JJ	_	18	amod	_
+18	work	work	NN	_	12	pobj	_
+19	.	.	.	_	9	punct	_
+
+1	To	to	TO	_	2	aux	_
+2	celebrate	celebrate	VB	pb=celebrate	8	advcl	8:PRP
+3	,	,	,	_	8	punct	_
+4	Todd	todd	NNP	_	7	poss	_
+5	'	'	POS	p2=``	4	case	_
+6	s	s	POS	p2=AFX	7	poss	_
+7	dad	dad	NN	_	8	nsubj	2:A0;8:A0
+8	carved	carve	VBD	pb=carve	0	root	_
+9	Todd	todd	NNP	_	12	poss	_
+10	'	'	POS	p2=``	9	case	_
+11	s	s	POS	p2=NN	12	poss	_
+12	name	name	NN	_	8	dobj	8:A1
+13	and	and	CC	_	12	cc	_
+14	the	the	DT	_	15	det	_
+15	date	date	NN	_	12	conj	_
+16	into	into	IN	_	8	prep	8:A2
+17	a	a	DT	_	18	det	_
+18	tree	tree	NN	_	16	pobj	_
+19	.	.	.	_	8	punct	_
+
+1	This	this	DT	_	2	det	_
+2	way	way	NN	_	7	npadvmod	7:MNR
+3	,	,	,	_	7	punct	_
+4	they	they	PRP	_	7	nsubj	7:A0
+5	would	would	MD	_	7	aux	7:MOD
+6	always	always	RB	_	7	advmod	7:TMP
+7	remember	remember	VB	pb=remember	0	root	_
+8	Todd	todd	NNP	_	12	poss	_
+9	'	'	POS	p2=``	8	case	_
+10	s	s	POS	p2=AFX	8	case	_
+11	hard	hard	JJ	_	12	amod	_
+12	work	work	NN	_	7	dobj	7:A1
+13	.	.	.	_	7	punct	_
+
+1	1000	0	CD	_	2	nummod	_
+2	delimiter	delimiter	NN	p2=RB	0	root	_
+3	.	.	.	_	2	punct	_
+
+1	How	how	WRB	_	2	advmod	_
+2	long	long	JJ	p2=RB	3	acomp	3:R-PRD
+3	was	be	VBD	pb=be	0	root	_
+4	it	it	PRP	_	3	nsubj	3:A1
+5	before	before	IN	_	7	mark	_
+6	Todd	todd	NNP	_	7	nsubj	7:A0
+7	made	make	VBD	pb=make	3	advcl	3:TMP
+8	it	it	PRP	_	7	dobj	7:C-V
+9	to	to	IN	_	7	prep	7:A2
+10	the	the	DT	_	11	det	_
+11	rock	rock	NN	_	9	pobj	_
+12	?	?	.	_	3	punct	_
+
+1	One	one	CD	_	2	nummod	_
+2	month	month	NN	_	0	root	_
+3	.	.	.	_	2	punct	_
+
+1	999	0	CD	_	2	nummod	_
+2	delimiter	delimiter	NN	p2=JJR	0	root	_
+3	.	.	.	_	2	punct	_
+
+1	One	one	CD	_	2	nummod	_
+2	week	week	NN	_	0	root	_
+3	.	.	.	_	2	punct	_
+
+1	999	0	CD	_	2	nummod	_
+2	delimiter	delimiter	NN	p2=JJR	0	root	_
+3	.	.	.	_	2	punct	_
+
+1	Two	two	CD	_	2	nummod	_
+2	weeks	week	NNS	_	0	root	_
+3	.	.	.	_	2	punct	_
+
+1	999	0	CD	_	2	nummod	_
+2	delimiter	delimiter	NN	p2=JJR	0	root	_
+3	.	.	.	_	2	punct	_
+
+1	Two	two	CD	_	2	nummod	_
+2	months	month	NNS	_	0	root	_
+3	.	.	.	_	2	punct	_
+
+1	999	0	CD	_	2	nummod	_
+2	delimiter	delimiter	NN	p2=JJR	0	root	_
+3	.	.	.	_	2	punct	_
+
+1	0	0	CD	p2=NFP	2	nummod	_
+2	answer	answer	NN	_	0	root	_
+3	.	.	.	_	2	punct	_
+
+1	What	what	WP	_	6	dobj	6:R-A1
+2	did	do	VBD	_	4	aux	_
+3	Todd	todd	NNP	_	4	nsubj	6:A0
+4	have	have	VB	_	11	ccomp	_
+5	to	to	TO	_	6	aux	_
+6	do	do	VB	pb=do	4	xcomp	_
+7	so	so	RB	p2=IN	6	advmod	6:A1
+8	his	his	PRP$	_	9	poss	_
+9	dad	dad	NN	_	11	nsubj	11:A0
+10	would	would	MD	_	11	aux	11:MOD
+11	watch	watch	VB	pb=watch	0	root	_
+12	him	him	PRP	_	11	dobj	11:A1
+13	every	every	DT	_	14	det	_
+14	day	day	NN	_	11	npadvmod	11:TMP
+15	?	?	.	_	11	punct	_
+
+1	Try	try	VB	pb=try	0	root	_
+2	his	his	PRP$	_	3	poss	_
+3	hardest	hard	JJS	p2=RBS	1	dobj	1:A1
+4	.	.	.	_	1	punct	_
+
+1	999	0	CD	_	2	nummod	_
+2	delimiter	delimiter	NN	p2=JJR	0	root	_
+3	.	.	.	_	2	punct	_
+
+1	Follow	follow	VB	pb=follow	0	root	_
+2	his	his	PRP$	_	3	poss	_
+3	dad	dad	NN	_	1	dobj	1:A1
+4	to	to	IN	_	1	prep	1:GOL
+5	the	the	DT	_	6	det	_
+6	rock	rock	NN	_	4	pobj	_
+7	.	.	.	_	1	punct	_
+
+1	999	0	CD	_	2	nummod	_
+2	delimiter	delimiter	NN	p2=JJR	0	root	_
+3	.	.	.	_	2	punct	_
+
+1	Get	get	VB	pb=get	0	root	_
+2	to	to	IN	_	1	prep	1:GOL
+3	the	the	DT	_	5	det	_
+4	big	big	JJ	_	5	amod	_
+5	rock	rock	NN	_	2	pobj	_
+6	.	.	.	_	1	punct	_
+
+1	999	0	CD	_	2	nummod	_
+2	delimiter	delimiter	NN	p2=JJR	0	root	_
+3	.	.	.	_	2	punct	_
+
+1	Not	not	RB	_	2	neg	2:NEG
+2	swim	swim	VB	pb=swim	0	root	_
+3	too	too	RB	_	4	advmod	_
+4	far	far	RB	_	2	advmod	2:EXT
+5	.	.	.	_	2	punct	_
+
+1	999	0	CD	_	2	nummod	_
+2	delimiter	delimiter	NN	p2=JJR	0	root	_
+3	.	.	.	_	2	punct	_
+
+1	0	0	CD	p2=NFP	2	nummod	_
+2	answer	answer	NN	_	0	root	_
+3	.	.	.	_	2	punct	_
+
+1	What	what	WP	_	2	attr	2:R-PRD
+2	was	be	VBD	pb=be	0	root	_
+3	Todd	todd	NNP	_	6	poss	_
+4	's	's	POS	_	3	possessive	_
+5	favorite	favorite	JJ	_	6	amod	_
+6	part	part	NN	_	2	nsubj	2:A1
+7	of	of	IN	_	6	prep	_
+8	Lake	lake	NNP	_	9	nn	_
+9	Keet	keet	NNP	_	7	pobj	_
+10	?	?	.	_	2	punct	_
+
+1	The	the	DT	_	2	det	_
+2	plants	plant	NNS	_	0	root	_
+3	.	.	.	_	2	punct	_
+
+1	999	0	CD	_	2	nummod	_
+2	delimiter	delimiter	NN	p2=JJR	0	root	_
+3	.	.	.	_	2	punct	_
+
+1	The	the	DT	_	3	det	_
+2	big	big	JJ	_	3	amod	_
+3	rock	rock	NN	_	0	root	_
+4	.	.	.	_	3	punct	_
+
+1	999	0	CD	_	2	nummod	_
+2	delimiter	delimiter	NN	p2=JJR	0	root	_
+3	.	.	.	_	2	punct	_
+
+1	The	the	DT	_	2	det	_
+2	fish	fish	NN	_	0	root	_
+3	.	.	.	_	2	punct	_
+
+1	999	0	CD	_	2	nummod	_
+2	delimiter	delimiter	NN	p2=JJR	0	root	_
+3	.	.	.	_	2	punct	_
+
+1	The	the	DT	_	3	det	_
+2	small	small	JJ	_	3	amod	_
+3	shells	shell	NNS	_	0	root	_
+4	.	.	.	_	3	punct	_
+
+1	999	0	CD	_	2	nummod	_
+2	delimiter	delimiter	NN	p2=JJR	0	root	_
+3	.	.	.	_	2	punct	_
+
+1	1	0	CD	_	2	nummod	_
+2	answer	answer	NN	_	0	root	_
+3	.	.	.	_	2	punct	_
+
+1	How	how	WRB	_	6	advmod	6:R-MNR
+2	did	do	VBD	_	6	aux	_
+3	Todd	todd	NNP	_	5	poss	_
+4	's	's	POS	_	3	case	_
+5	dad	dad	NN	_	6	nsubj	6:A0
+6	celebrate	celebrate	VB	p2=VBP|pb=celebrate	0	root	_
+7	Todd	todd	NNP	_	10	poss	_
+8	's	's	POS	_	7	case	_
+9	hard	hard	JJ	_	10	amod	_
+10	work	work	NN	_	6	dobj	6:A1
+11	?	?	.	_	6	punct	_
+
+1	He	he	PRP	_	2	nsubj	2:A0
+2	wrote	write	VBD	pb=write	0	root	_
+3	down	down	RP	p2=IN	2	prt	2:C-V
+4	Todd	todd	NNP	_	6	poss	_
+5	's	's	POS	_	4	case	_
+6	name	name	NN	_	2	dobj	2:A1
+7	and	and	CC	_	6	cc	_
+8	the	the	DT	_	9	det	_
+9	date	date	NN	_	6	conj	_
+10	in	in	IN	_	2	prep	2:LOC
+11	his	his	PRP$	_	12	poss	_
+12	notebook	notebook	NN	_	10	pobj	_
+13	.	.	.	_	2	punct	_
+
+1	999	0	CD	_	2	nummod	_
+2	delimiter	delimiter	NN	p2=JJR	0	root	_
+3	.	.	.	_	2	punct	_
+
+1	He	he	PRP	_	2	nsubj	2:A0
+2	carved	carve	VBD	pb=carve	0	root	_
+3	Todd	todd	NNP	_	5	poss	_
+4	's	's	POS	_	3	case	_
+5	name	name	NN	_	2	dobj	2:A1
+6	into	into	IN	_	2	prep	2:GOL
+7	a	a	DT	_	8	det	_
+8	tree	tree	NN	_	6	pobj	_
+9	.	.	.	_	2	punct	_
+
+1	999	0	CD	_	2	nummod	_
+2	delimiter	delimiter	NN	p2=JJR	0	root	_
+3	.	.	.	_	2	punct	_
+
+1	He	he	PRP	_	2	nsubj	2:A0
+2	practiced	practice	VBD	pb=practice	0	root	_
+3	even	even	RB	_	4	advmod	_
+4	harder	hard	RBR	p2=JJR	2	advmod	2:MNR
+5	.	.	.	_	2	punct	_
+
+1	999	0	CD	_	2	nummod	_
+2	delimiter	delimiter	NN	p2=JJR	0	root	_
+3	.	.	.	_	2	punct	_
+
+1	He	he	PRP	_	2	nsubj	2:A0
+2	swam	swim	VBD	p2=VBZ|pb=swim	0	root	_
+3	to	to	IN	_	2	prep	2:A1
+4	the	the	DT	_	5	det	_
+5	rock	rock	NN	_	3	pobj	_
+6	again	again	RB	_	2	advmod	2:TMP
+7	.	.	.	_	2	punct	_
+
+1	999	0	CD	_	2	nummod	_
+2	delimiter	delimiter	NN	p2=JJR	0	root	_
+3	.	.	.	_	2	punct	_
+
+1	1	0	CD	_	2	nummod	_
+2	answer	answer	NN	_	0	root	_
+3	.	.	.	_	2	punct	_
+
