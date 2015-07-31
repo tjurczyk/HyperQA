@@ -9,6 +9,7 @@ public enum FieldType {
 
     TEXT       (Group.LEXICAL),
     LEMMA_TEXT (Group.LEXICAL),
+    ROOTVERB   (Group.LEXICAL),
 
     DEPNODE    (Group.SYNTACTIC),
     DEPWORD    (Group.SYNTACTIC),

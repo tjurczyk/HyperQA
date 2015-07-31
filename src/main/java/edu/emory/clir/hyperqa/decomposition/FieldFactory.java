@@ -1,9 +1,6 @@
 package edu.emory.clir.hyperqa.decomposition;
 
-import edu.emory.clir.hyperqa.decomposition.fields.Field;
-import edu.emory.clir.hyperqa.decomposition.fields.FieldID;
-import edu.emory.clir.hyperqa.decomposition.fields.FieldLemmatizedText;
-import edu.emory.clir.hyperqa.decomposition.fields.FieldText;
+import edu.emory.clir.hyperqa.decomposition.fields.*;
 
 /**
  * @author Tomasz Jurczyk ({@code tomasz.jurczyk@emory.edu})
@@ -20,6 +17,10 @@ public class FieldFactory {
                 return new FieldText(conf);
             case LEMMA_TEXT:
                 return new FieldLemmatizedText(conf);
+            case ROOTVERB:
+                return new FieldRootVerb(conf);
+            case SEM_A1:
+                return new FieldA1Role(conf);
             default:
                 throw new UnsupportedOperationException();
         }

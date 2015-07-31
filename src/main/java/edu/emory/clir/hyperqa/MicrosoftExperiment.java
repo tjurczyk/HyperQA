@@ -59,34 +59,27 @@ public class MicrosoftExperiment {
         }
         else if (mode == 1)
         {
+            int all = 0;
+            double correct = 0;
             for (MicrosoftDocument document: l_documents)
             {
+                index.clearIndex();
                 indexDocument(document);
                 MicrosoftAnswerer answerer = new MicrosoftAnswerer(document, fieldsConfiguration, index);
-                System.out.println(answerer.test());
+                all += 4;
+                double doc_correct = answerer.test();
+                System.out.println("Document has correct = " + doc_correct);
+                correct += doc_correct;
+                //System.exit(0);
             }
+            System.out.println(all);
+            System.out.println(correct);
         }
         else if (mode == 2)
         {
             for (int i = 0; i < N; i++)
             {
-//                for (MicrosoftDocument document: l_documents)
-//                {
-//                    processDocument(document);
-//                    trainModel(document);
-//                }
-//
-//                for (MicrosoftDocument document: l_documents)
-//                {
-//                    processDocument(document);
-//                    validateModel(document);
-//                }
-//
-//                for (MicrosoftDocument document: l_documents)
-//                {
-//                    processDocument(document);
-//                    testModel(document);
-//                }
+                // To be filled
             }
         }
     }

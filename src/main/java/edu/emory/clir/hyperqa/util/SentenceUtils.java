@@ -10,16 +10,13 @@ import edu.emory.clir.clearnlp.dependency.DEPTree;
 public class SentenceUtils {
     private SentenceUtils(){}
 
-    public static boolean isQuestion(DEPTree depTree)
-    {
-        for (DEPNode node: depTree)
-        {
-            if (node.getWordForm().equals("?")) return true;
-        }
-
-        return false;
-    }
-
+    /**
+     * Find a first occurrence of an integer in a Dep. Tree.
+     *
+     * @param tree Dependency tree of a sentence
+     * @return first found integer in a sentence
+     * @throws IndexOutOfBoundsException if no integer has been found
+     */
     public static int getFirstIntOccurrence(DEPTree tree)
     {
         for (DEPNode node: tree)

@@ -95,6 +95,9 @@ public class ElasticSearchIndex implements Index<DecomposedSentence>{
 
         for (Map.Entry<FieldType,String> entry: sentence.getFieldRepresentation().entrySet())
         {
+            // If FieldType.ID or empty, skip this entry
+            if (entry.getKey().equals(FieldType.ID) || entry.getValue().equals("")) continue;
+
             m_result.put(entry.getKey(), query(entry));
         }
 
