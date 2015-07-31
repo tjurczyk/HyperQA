@@ -17,7 +17,7 @@ import java.util.List;
  * @since 1.0
  */
 public class MicrosoftExperiment {
-    static String filename = "mc160.test.";
+    static String filename = "data/microsoft/mc160.test/mc160.test.";
     List<MicrosoftDocument> l_documents;
     FieldsConfiguration fieldsConfiguration;
     Index index = new ElasticSearchIndex();
